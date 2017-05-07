@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+  <title>按钮元素动画效果</title>
+  <style>
+    button {
+      padding: 20px;
+      background-color: #FF6F69;
+    }
+    a {
+      color: #FFEEAD;
+      text-decoration: none;
+      font-size: 26px;
+      display: inline-block;
+      box-sizing: border-box;/*添加padding时，总宽不会改变*/
+      width: 180px;
+      height: 40px;
+      line-height: 40px;
+      /*text-align: center;*/
+      padding-left: 80px;
+      background-color: #FF6F69;
+      border: 1px solid #FFEEAD;
+      border-radius: 10px;
+      position: relative;
+
+
+      -webkit-transition: all .5s linear;/*鼠标划过链接时，过渡动画*/
+      transition: all .5s linear;
+    }
+    i {
+      position: absolute;/*给箭头图标定位*/
+      top: 20%;
+      right: 80%;
+
+      -webkit-transition: all .5s;/*设置图标动画*/
+      transition: all .5s;
+    }
+    a:hover { /*鼠标放上，需要动画的属性*/
+      color: #FF6F69;
+      background-color: #FFEEAD;
+      padding-left: 0%;
+    }
+    a:hover i { /*鼠标放上后的i的动画属性*/
+      right: 5%;
+    }
+  </style>
+</head>
+<body>
+  <button><a href="#"><i class="fa fa-chevron-right"></i>按钮</a></button>
+</body>
+</html>
